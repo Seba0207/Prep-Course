@@ -82,7 +82,7 @@ function tienePropiedad (objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(objeto.propiedad){
+  if(objeto[propiedad]){
     return true;
   }
     return false;
@@ -123,6 +123,10 @@ function pasarUsuarioAPremium (usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+  for(var i = 0; i < usuarios.length; i++){
+    usuarios[i].esPremium = true;
+  }
+  return usuarios;
 }
 
 function sumarLikesDeUsuario (usuario) {
@@ -132,6 +136,12 @@ function sumarLikesDeUsuario (usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+    var sumaLikes = 0;
+
+    for(var i = 0; i < usuario.posts.length; i++){
+      sumaLikes = sumaLikes + usuario.posts[i].likes
+  }
+  return sumaLikes;
 }
 
 function agregarMetodoCalculoDescuento (producto) {
@@ -144,6 +154,11 @@ function agregarMetodoCalculoDescuento (producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
+      producto.calcularPrecioDescuento = function(){
+        return this.precio - (this.precio * this.porcentajeDeDescuento)
+      }
+        return producto;
+
 
 }
 
