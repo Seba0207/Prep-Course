@@ -1,0 +1,36 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+body {
+    background-image: url("https://img.freepik.com/free-vector/white-background-with-zigzag-pattern-design_1017-33197.jpg?w=360");
+}
+
+div {
+    text-align: center;
+    margin: 0 auto;
+
+}
+
+h1 {
+    color: #B10925;
+}
+
+img {
+    width: 400px;
+}
+
+#thirdDiv {
+    background-color: grey;
+    height: 600px;
+    width: 500px;
+    padding: 50px;
+    border: black solid 5px;
+}
+
+#spanId {
+    margin: 50px;
+    font-size: 18px;
+}
